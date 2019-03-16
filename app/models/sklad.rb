@@ -1,0 +1,2 @@
+class Sklad < ApplicationRecord
+end

@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  oldid: MyString
+  category: MyString
+  name: MyString
+  counttt: MyString
+  nottte: MyString
+  image: MyString
+  price: MyString
+  min_count: MyString
+  count_zakaz: MyString
+  save_place: MyString
+  artikul: MyString
+  name_pdf: MyString
+  draw_pdf: MyString
+  name_dxf: MyString
+  draw_dxf: MyString
+  value_types: MyString
+
+two:
+  oldid: MyString
+  category: MyString
+  name: MyString
+  counttt: MyString
+  nottte: MyString
+  image: MyString
+  price: MyString
+  min_count: MyString
+  count_zakaz: MyString
+  save_place: MyString
+  artikul: MyString
+  name_pdf: MyString
+  draw_pdf: MyString
+  name_dxf: MyString
+  draw_dxf: MyString
+  value_types: MyString

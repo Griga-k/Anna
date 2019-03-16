@@ -1,0 +1,97 @@
+<%= form_with(model: sklad, local: true) do |form| %>
+  <% if sklad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sklad.errors.count, "error") %> prohibited this sklad from being saved:</h2>
+
+      <ul>
+      <% sklad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :oldid %>
+    <%= form.text_field :oldid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counttt %>
+    <%= form.text_field :counttt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nottte %>
+    <%= form.text_field :nottte %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_count %>
+    <%= form.text_field :min_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :count_zakaz %>
+    <%= form.text_field :count_zakaz %>
+  </div>
+
+  <div class="field">
+    <%= form.label :save_place %>
+    <%= form.text_field :save_place %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artikul %>
+    <%= form.text_field :artikul %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_pdf %>
+    <%= form.text_field :name_pdf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draw_pdf %>
+    <%= form.text_field :draw_pdf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_dxf %>
+    <%= form.text_field :name_dxf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draw_dxf %>
+    <%= form.text_field :draw_dxf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value_types %>
+    <%= form.text_field :value_types %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

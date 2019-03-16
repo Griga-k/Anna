@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sklads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Oldid</th>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Counttt</th>
+      <th>Nottte</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Min count</th>
+      <th>Count zakaz</th>
+      <th>Save place</th>
+      <th>Artikul</th>
+      <th>Name pdf</th>
+      <th>Draw pdf</th>
+      <th>Name dxf</th>
+      <th>Draw dxf</th>
+      <th>Value types</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sklads.each do |sklad| %>
+      <tr>
+        <td><%= sklad.oldid %></td>
+        <td><%= sklad.category %></td>
+        <td><%= sklad.name %></td>
+        <td><%= sklad.counttt %></td>
+        <td><%= sklad.nottte %></td>
+        <td><%= sklad.image %></td>
+        <td><%= sklad.price %></td>
+        <td><%= sklad.min_count %></td>
+        <td><%= sklad.count_zakaz %></td>
+        <td><%= sklad.save_place %></td>
+        <td><%= sklad.artikul %></td>
+        <td><%= sklad.name_pdf %></td>
+        <td><%= sklad.draw_pdf %></td>
+        <td><%= sklad.name_dxf %></td>
+        <td><%= sklad.draw_dxf %></td>
+        <td><%= sklad.value_types %></td>
+        <td><%= link_to 'Show', sklad %></td>
+        <td><%= link_to 'Edit', edit_sklad_path(sklad) %></td>
+        <td><%= link_to 'Destroy', sklad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sklad', new_sklad_path %>

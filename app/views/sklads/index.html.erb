@@ -33,7 +33,9 @@
         <td><%= sklad.name %></td>
         <td><%= sklad.counttt %></td>
         <td><%= sklad.nottte %></td>
-        <td><%= sklad.image %></td>
+        <td>
+           <%= image_tag(sklad.image, class: 'list_image')%>
+        </td>
         <td><%= sklad.price %></td>
         <td><%= sklad.min_count %></td>
         <td><%= sklad.count_zakaz %></td>

@@ -1,7 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Sklad.delete_all 
+Sklad.create(id: 5, category: 2, name: 'Труба стальная полдюйма (диаметр до 22мм)', counttt: 0, nottte: 'Труба для ТЕН печной секции', image: '1', price: 0, min_count: 0, count_zakaz: 0, save_place: '', artikul: '12 метров', name_pdf: '', draw_pdf: '1', name_dxf: '', draw_dxf: '1', value_types: 0) 
+Sklad.create(id: 6, category: 1, name: 'Заготовки из поликарбоната для гильотины', counttt: 0, nottte: 'Заготовки из поликарбоната для гильотины', image: '1', price: 0, min_count: 0, count_zakaz: 1, save_place: '', artikul: '', name_pdf: 'Polikarbonat.pdf', draw_pdf: '1', name_dxf: '', draw_dxf: '1', value_types: 0) 

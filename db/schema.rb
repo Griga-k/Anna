@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2019_03_15_154036) do
 
   create_table "sklads", force: :cascade do |t|
-    t.decimal "oldid"
     t.decimal "category"
     t.string "name"
     t.decimal "counttt"

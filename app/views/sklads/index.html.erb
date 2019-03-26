@@ -33,7 +33,11 @@
         <td><%= sklad.name %></td>
         <td><%= sklad.counttt %></td>
         <td><%= sklad.nottte %></td>
-        <td> <%= image_tag(sklad.image, class: 'list_image')%>
+        <td> <% if sklad.asset_exists? sklad.image  %>
+                <%=    image_tag(sklad.image, class: 'list_image') %>
+                <% else %>
+                <%=    image_tag('no_image.jpg', class: 'list_image')%>
+                 <% end %>
         </td>
         <td><%= sklad.price %></td>
         <td><%= sklad.min_count %></td>

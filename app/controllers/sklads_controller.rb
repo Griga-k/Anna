@@ -61,6 +61,14 @@ class SkladsController < ApplicationController
     end
   end
 
+# def asset_exists?(path)
+ #  if Rails.configuration.assets.compile
+ #    Rails.application.precompiled_assets.include? path
+ #  else
+ #    Rails.application.assets_manifest.assets[path].present?
+ #  end
+# end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sklad
@@ -69,6 +77,6 @@ class SkladsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sklad_params
-      params.require(:sklad).permit(:oldid, :category, :name, :counttt, :nottte, :image, :price, :min_count, :count_zakaz, :save_place, :artikul, :name_pdf, :draw_pdf, :name_dxf, :draw_dxf, :value_types)
+      params.require(:sklad).permit(:id, :category, :name, :counttt, :nottte, :image, :price, :min_count, :count_zakaz, :save_place, :artikul, :name_pdf, :draw_pdf, :name_dxf, :draw_dxf, :value_types)
     end
 end

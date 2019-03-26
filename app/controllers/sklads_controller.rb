@@ -4,7 +4,7 @@ class SkladsController < ApplicationController
   # GET /sklads
   # GET /sklads.json
   def index
-    @sklads = Sklad.all
+    @sklads = Sklad.order(:id)
   end
 
   # GET /sklads/1

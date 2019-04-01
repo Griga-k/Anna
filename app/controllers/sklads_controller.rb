@@ -4,7 +4,9 @@ class SkladsController < ApplicationController
   # GET /sklads
   # GET /sklads.json
   def index
-    @sklads = Sklad.order(:id)
+    #@sklads = Sklad.order(:id)
+    @sklads = Sklad.joins('LEFT JOIN categories ON sklads.category = categories.id').select('sklads.image as image, sklads.id as id, categories.name as cat, sklads.name as name,sklads.counttt as counttt, sklads.nottte as nottte, sklads.price as price, sklads.min_count as min_count, sklads.count_zakaz as count_zakaz, sklads.save_place as save_place, sklads.artikul as artikul,sklads.name_pdf as name_pdf,sklads.name_dxf as name_dxf') 
+
   end
 
   # GET /sklads/1

@@ -1,4 +1,6 @@
 class Sklad < ApplicationRecord
+   belongs_to :category  # имеет индекс для категории
+
    def self.latest
       Sklad.order(:id).last
    end

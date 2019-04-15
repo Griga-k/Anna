@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hystory_zakazs
   resources :categories
   devise_for :users
   root to: 'sklads#index'

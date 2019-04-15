@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date time:</strong>
+  <%= @hystory_zakaz.date_time %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @hystory_zakaz.email %>
+</p>
+
+<p>
+  <strong>Body mail:</strong>
+  <%= @hystory_zakaz.body_mail %>
+</p>
+
+<%= link_to 'Edit', edit_hystory_zakaz_path(@hystory_zakaz) %> |
+<%= link_to 'Back', hystory_zakazs_path %>

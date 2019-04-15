@@ -7,9 +7,55 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
     <body class='<%= controller.controller_name %>'>
-    <%= yield %>
+     
+<% if user_signed_in? %>
+
+
+<nav>
+  <ul class="topmenu">
+    <li><a href="" class="down">Проекты</a>
+      <ul class="submenu">
+        <li><a href="">Новый проект</a></li>
+        <li><a href="">Новый разовый проект</a></li>
+        <li><a href="">Список проектов</a></li>
+        <li><a href="">История проектов</a></li>
+      </ul>
+    </li>
+    <li><a href="sklads#index" class="down">Склад</a>
+      <ul class="submenu">
+        <li><a href="">Новая позиция</a></li>
+        <li><a href="sklads#index">Список позиций</a></li>
+      </ul>
+    </li>
+    <li><a href="categories#index" class="down">Категории</a>
+      <ul class="submenu">
+        <li><a href="">Новая категория</a></li>
+        <li><a href="categories#index">Список категорий</a></li>
+      </ul>
+    </li>
+    <li><a href="hystory_zakazs#index" class="down">Заказы</a>
+      <ul class="submenu">
+        <li><a href="">Текущий заказ</a></li>
+        <li><a href="hystory_zakazs#index">История заказов</a></li>
+      </ul>
+    </li>
+    <li><a href="" class="down">Настройки</a>
+      <ul class="submenu">
+        <li><a href="">Размещение некоторых объектов</a></li>
+        <li><a href="">Настройки письма</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<% end %>
+     
+        <div>
+          <%= yield %>
+        </div>
+     
   </body>
 </html>

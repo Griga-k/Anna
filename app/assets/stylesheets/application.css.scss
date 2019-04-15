@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* { box-sizing: border-box; }
+
+table {
+border-collapse: collapse;
+
+}
+table tr td {
+padding: 5px;
+text-align: center;
+vertical-align: center;
+}
+
+
+body {
+  /*
+  *margin: 50;  
+  *background: radial-gradient(#BFD6E2 1px, rgba(255,255,255,0) 2px);
+  *background-size: 10px 10px;
+  */
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+white-space: nowrap;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+white-space: nowrap;
+}
+.topmenu {
+  backface-visibility: hidden;
+  background: rgba(255,255,255,.8);
+white-space: nowrap;
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+white-space: nowrap;
+}
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color: #003559;
+  text-transform: uppercase;
+white-space: nowrap;
+}
+.down:after {
+content: '';
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #ccc - 666;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  margin-top: -2px;
+}
+.topmenu li a:hover {
+  color: #E6855F;
+  *font-weight: bold;
+  white-space: nowrap;
+  *color: #0000FF; 
+  background: #ffffff;
+   }
+.submenu {
+  background: #ffffff;
+  border: 2px solid #003559;
+  position: absolute;    
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  *max-width: 200px;
+  width: auto;
+white-space: nowrap;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: .6s ease-in-out;
+}
+.topmenu > li:hover .submenu{
+  background: #ffffff;
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+white-space: nowrap;
+}
+.submenu li a {
+  *color: #7f7f7f;
+  color: #000000; 
+  font-size: 16px;
+  *font-weight: normal;
+  line-height: 20px;
+  padding: 5px 2px;
+  font-family: 'Kurale', serif;
+white-space: nowrap;
+}
+

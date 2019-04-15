@@ -1,0 +1,2 @@
+class HystoryZakaz < ApplicationRecord
+end

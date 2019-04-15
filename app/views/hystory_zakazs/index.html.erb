@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Заказы</h1>
+
+<table border="3">
+  <thead>
+    <tr>
+      <th>Номер</th>
+      <th>Дата/Время</th>
+      <th>Адрес почты</th>
+      <th>Тело письма</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hystory_zakazs.each do |hystory_zakaz| %>
+      <tr> 
+        <td><%= hystory_zakaz.id %></td>
+        <td><%= hystory_zakaz.date_time %></td>
+        <td><%= hystory_zakaz.email %></td>
+        <td><%= hystory_zakaz.body_mail %></td>
+        <td><%= link_to 'Show', hystory_zakaz %></td>
+        <td><%= link_to 'Edit', edit_hystory_zakaz_path(hystory_zakaz) %></td>
+        <td><%= link_to 'Destroy', hystory_zakaz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hystory Zakaz', new_hystory_zakaz_path %>

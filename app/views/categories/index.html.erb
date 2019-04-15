@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
+<h1>Категории</h1>
 
 <table border="3">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Body mail</th>
-      <th>Body mail end</th>
+      <th>Номер</th>
+      <th>Наименование</th>
+      <th>Адрес почты</th>
+      <th>Тело письма</th>
+      <th>Подпись</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
   <tbody>
     <% @categories.each do |category| %>
       <tr>
+        <td><%= category.id %></td>
         <td><%= category.name %></td>
         <td><%= category.email %></td>
         <td><%= category.body_mail %></td>

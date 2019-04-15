@@ -1,0 +1,32 @@
+<%= form_with(model: hystory_zakaz, local: true) do |form| %>
+  <% if hystory_zakaz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hystory_zakaz.errors.count, "error") %> prohibited this hystory_zakaz from being saved:</h2>
+
+      <ul>
+      <% hystory_zakaz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_time %>
+    <%= form.text_field :date_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_mail %>
+    <%= form.text_field :body_mail %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
